@@ -1,0 +1,90 @@
+<div class="flex flex-col grow overflow-auto h-0">
+    <ion-card class="overflow-visible m-0">
+        <ion-card-header>
+            <ion-card-title class="text-center">{{ giph?.title }}</ion-card-title>
+        </ion-card-header>
+        <ion-card-content class="flex p-0">
+            <table class="grow info">
+                <tr v-if="giph?.url">
+                    <td colspan="2">
+                        <div class="flex content-center items-center">
+                            <div :style="{ width: '100%' }" class="flex clex-row content-center fadein-animation">
+                                <giph-image :giph="giph" class="flex grow"></giph-image>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <!-- <tr v-if="giph?.url">
+                    <td class="text-center pt-5" colspan="2">
+                        <div class="flex flex-row flex-wrap justify-around">
+                            <ion-button class="primary p-0" :disabled="isLoading" type="ion-button" @click="onSave()">
+                                <ion-icon :icon="icons.save" class="mr-2"></ion-icon>
+                                Save
+                            </ion-button>
+
+                            <ion-button class="primary p-0" :disabled="isLoading" type="ion-button" @click="onCopy()">
+                                <ion-icon :icon="icons.copy" class="mr-2"></ion-icon>
+                                Copy URL
+                            </ion-button>
+
+                            <ion-button class="primary p-0" :disabled="isLoading" type="ion-button" @click="onOpenInSlack(giph)">
+                                <ion-icon :icon="icons.open" class="mr-2"></ion-icon>
+                                Open in Slack
+                            </ion-button>
+                        </div>
+                    </td>
+                </tr> -->
+                <tr>
+                    <td colspan="2" class="font-bold pt-5">Giph information</td>
+                </tr>
+                <tr v-if="giph?.title">
+                    <td>Title:</td>
+                    <td>{{ giph?.title }}</td>
+                </tr>
+                <tr v-if="giph?.id">
+                    <td>ID:</td>
+                    <td>{{ giph?.id }}</td>
+                </tr>
+                <tr v-if="giph?.width && giph?.height">
+                    <td>Dimensions:</td>
+                    <td>{{ giph?.width }} x {{ giph?.height }}</td>
+                </tr>
+                <tr v-if="giph?.size">
+                    <td>Size:</td>
+                    <td>{{ formatBytes(giph?.size) }}</td>
+                </tr>
+                <tr v-if="giph?.created">
+                    <td>Created:</td>
+                    <td>{{ giph?.created }}</td>
+                </tr>
+                <tr v-if="giph?.source">
+                    <td>Source:</td>
+                    <td class="pt-3 break-all"><a :href="giph?.source" target="_blank">{{ giph?.source }}</a></td>
+                </tr>
+                <tr v-if="giph?.embedUrl">
+                    <td>Embed URL:</td>
+                    <td class="pt-3 break-all"><a :href="giph?.embedUrl" target="_blank">{{ giph?.embedUrl }}</a></td>
+                </tr>
+                <tr v-if="giph?.username">
+                    <td colspan="2" class="font-bold pt-5">User information</td>
+                </tr>
+                <tr v-if="giph?.username">
+                    <td>Username:</td>
+                    <td>{{ giph?.username }}</td>
+                </tr>
+                <tr v-if="giph?.userDisplayName">
+                    <td>User display name:</td>
+                    <td>{{ giph?.userDisplayName }}</td>
+                </tr>
+                <tr v-if="giph?.userDescription">
+                    <td>User description:</td>
+                    <td>{{ giph?.userDescription }}</td>
+                </tr>
+                <tr v-if="giph?.userProfileUrl">
+                    <td>User profile URL:</td>
+                    <td class="pt-3 break-all"><a :href="giph?.userProfileUrl" target="_blank">{{ giph?.userProfileUrl }}</a></td>
+                </tr>
+            </table>
+        </ion-card-content>
+    </ion-card>
+</div>

@@ -1,0 +1,47 @@
+<ion-page>
+
+    <!-- header -->
+    <ion-header>
+        <ion-toolbar>
+            <ion-title>Giphy Explorer</ion-title>
+            <ion-buttons slot="end">
+
+                <!-- search history -->
+                <ion-button fill="clear" size="small" class="ion-no-padding" @click="showSearchHistory = true" :disabled="!canSeeSearchHistory">
+                    <ion-icon slot="icon-only" :ios="icons.ellipsisHorizontal" :md="icons.ellipsisVertical"></ion-icon>
+                </ion-button>
+
+                <!-- search history action -->
+                <ion-action-sheet header="Search History" :is-open="showSearchHistory" :buttons="searchHistoryButtons" @didDismiss="showSearchHistory = false">
+                </ion-action-sheet>
+            </ion-buttons>
+        </ion-toolbar>
+    </ion-header>
+
+    <!-- content -->
+    <ion-content class="ion-padding flex" scroll-y="false">
+        <ion-grid class="flex flex-col h-full">
+            <ion-row>
+                <ion-col>
+                    <giph-search-box :isLoading="isLoading" :searchKeywords="searchKeywords" @search="onSearch($event)" @clear="onClear()"></giph-search-box>
+                </ion-col>
+            </ion-row>
+            <ion-row class="flex flex-col grow">
+                <ion-col class="flex flex-col grow">
+                    <giph-list :isLoading="isLoading" :canLoadMore="itemCount < totalItemCount" :giphs="giphs" @select="onSelect($event)" @loadMore="onLoadMore()"></giph-list>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+    </ion-content>
+
+    <!-- footer -->
+    <ion-footer>
+        <ion-toolbar>
+            <ion-title>
+
+                <!-- pager -->
+                <giph-pager></giph-pager>
+            </ion-title>
+        </ion-toolbar>
+    </ion-footer>
+</ion-page>

@@ -1,0 +1,39 @@
+/* animations */
+
+.fadein-animation {
+    animation: fadein 2s;
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* hover animations */
+.grow-on-hover {
+    transition: all .2s ease-in-out;
+}
+
+.grow-on-hover:hover {
+    transform: scale(1.2);
+}
+
+/* custom animations */
+.rotate-counter-clockwise {
+    animation: rotation 3s infinite linear;
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(-359deg);
+    }
+}

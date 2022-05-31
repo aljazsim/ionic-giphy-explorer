@@ -1,0 +1,19 @@
+.bred {
+    border: 1px solid red !important;
+}
+
+.bblue {
+    border: 1px solid blue !important;
+}
+
+.bgreen {
+    border: 1px solid green !important;
+}
+
+.no-click {
+    pointer-events: none;
+}
+
+.hand {
+    cursor: pointer;
+}

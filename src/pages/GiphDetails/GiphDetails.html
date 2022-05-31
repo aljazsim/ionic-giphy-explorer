@@ -1,0 +1,55 @@
+<ion-page>
+
+    <!-- header -->
+    <ion-header>
+        <ion-toolbar>
+            <ion-buttons slot="start">
+                <ion-back-button defaultHref="" @click="onGoBack()"></ion-back-button>
+            </ion-buttons>
+            <ion-title>Giphy Explorer</ion-title>
+        </ion-toolbar>
+    </ion-header>
+
+    <!-- content -->
+    <ion-content class="ion-padding flex" scroll-y="false">
+        <ion-grid class="flex flex-col h-full p-0">
+            <ion-row class="flex flex-col grow">
+                <ion-col class="flex flex-col grow 0-0">
+
+                    <!-- info -->
+                    <giph-info :isLoading="isLoading" :giph="giph" @save="onSave($event)" @copy="onCopy($event)" @openInSlack="onOpenInSlack($event)"></giph-info>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+    </ion-content>
+
+    <!-- footer -->
+    <ion-footer>
+        <!-- <ion-toolbar>
+            <ion-title>
+        <giph-status-bar :isLoading=" isLoading" @goBack="goToGiphSearch()">
+        </giph-status-bar>
+        </ion-title>
+        </ion-toolbar> -->
+
+        <ion-toolbar>
+            <!-- <ion-title> Click to Add Text </ion-title> -->
+            <ion-buttons slot="end">
+                <ion-button class="primary p-0" :disabled="isLoading" type="ion-button" @click="onSave()">
+                    <ion-icon :icon="icons.save" class="mr-2"></ion-icon>
+                    Save
+                </ion-button>
+
+                <ion-button class="primary p-0" :disabled="isLoading" type="ion-button" @click="onCopy()">
+                    <ion-icon :icon="icons.copy" class="mr-2"></ion-icon>
+                    Copy URL
+                </ion-button>
+
+                <ion-button class="primary p-0" :disabled="isLoading" type="ion-button" @click="onOpenInSlack(giph)">
+                    <ion-icon :icon="icons.open" class="mr-2"></ion-icon>
+                    Open in Slack
+                </ion-button>
+            </ion-buttons>
+        </ion-toolbar>
+    </ion-footer>
+</ion-page>

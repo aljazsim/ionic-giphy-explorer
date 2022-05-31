@@ -1,0 +1,20 @@
+<vue-load-image>
+    <template v-slot:image>
+        <div class="flex flex-row grow">
+            <img :id="giph?.id" :src="giph?.url" style="width: 100%;" loading="lazy" />
+        </div>
+    </template>
+    <template v-slot:preloader>
+        <div class="flex flex-auto flex-col justify-center items-center light-gray p-2">
+            <span class="text-center font-bold mb-2">loading</span>
+            <span class="text-center font-bold mb-2">"{{ giph?.title }}"</span>
+
+            <ion-icon :icon="icons.loading" size="40px" class="rotate-counter-clockwise"></ion-icon>
+        </div>
+    </template>
+    <template v-slot:error>
+        <div class="flex flex-auto flex-col justify-center items-center light-gray">
+            <span class="text-center font-bold mb-2">error loading image :(</span>
+        </div>
+    </template>
+</vue-load-image>
