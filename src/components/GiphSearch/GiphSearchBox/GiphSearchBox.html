@@ -1,3 +1,3 @@
 <div class="flex flex-row grow items-center" :class="{ 'search-box-disabled': isLoading }">
-    <ion-searchbar :autofocus="true" class="flex grow" color="primary" placeholder="Search Giphs" v-model="model" :disabled="isLoading" enterkeyhint="search" inputmode="text" :maxlength="50" type="text" @keydown.enter="onSearch(model)" @ionClear="onClear()"></ion-searchbar>
+    <ion-searchbar :autofocus="true" class="flex grow p-1" color="primary" placeholder="Search Giphs" v-model="model" :disabled="isLoading" enterkeyhint="search" inputmode="search" :maxlength="50" type="text" @keydown.enter="onSearch(model)" @search="onSearch(model)" @ionClear="onClear()"></ion-searchbar>
 </div>
