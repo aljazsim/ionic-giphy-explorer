@@ -2,7 +2,6 @@ import "./assets/styles";
 import "reflect-metadata";
 import { Configuration, getConfiguration } from "./common/configuration";
 import GiphInfo from "./components/GiphDetails/GiphInfo/GiphInfo.vue";
-import GiphStatusBar from "./components/GiphDetails/GiphStatusBar/GiphStatusBar.vue";
 import GiphImage from "./components/GiphSearch/GiphImage/GiphImage.vue";
 import GiphList from "./components/GiphSearch/GiphList/GiphList.vue";
 import GiphPager from "./components/GiphSearch/GiphPager/GiphPager.vue";
@@ -81,7 +80,6 @@ app.component("giph-image", GiphImage);
 app.component("giph-pager", GiphPager);
 
 app.component("giph-info", GiphInfo);
-app.component("giph-status-bar", GiphStatusBar);
 
 // register plugins
 app.use(IonicVue);

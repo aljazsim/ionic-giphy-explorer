@@ -1,7 +1,7 @@
 <vue-load-image>
     <template v-slot:image>
         <div class="flex flex-row grow">
-            <img :id="giph?.id" :src="giph?.url" style="width: 100%;" loading="lazy" />
+            <img :id="'img' + giph?.id" :src="giph?.url" style="width: 100%;" loading="lazy" />
         </div>
     </template>
     <template v-slot:preloader>
