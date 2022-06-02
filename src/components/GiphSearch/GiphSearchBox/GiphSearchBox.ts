@@ -11,6 +11,11 @@ export default class GiphSearchBox extends Vue
 
     public model = "";
 
+    private get input(): HTMLInputElement
+    {
+        return (this.$refs?.input as any)?.$el as HTMLInputElement;
+    }
+
     @Watch("searchKeywords", { immediate: true, deep: false })
     public onSearchKeywordsChanged(newValue: string): void
     {
@@ -23,6 +28,9 @@ export default class GiphSearchBox extends Vue
     public onClear(): void
     {
         this.model = "";
+
+        this.input.focus();
+
         this.emitClearEvent();
     }
 

@@ -526,10 +526,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   justify-content: center;
 }
 
-.justify-around {
-  justify-content: space-around;
-}
-
 .overflow-auto {
   overflow: auto;
 }
