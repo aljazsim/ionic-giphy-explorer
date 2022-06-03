@@ -1,10 +1,5 @@
-import { IonApp, IonRouterOutlet } from "@ionic/vue";
-import { defineComponent } from "vue";
+import { Vue } from "vue-class-component";
 
-export default defineComponent({
-    name: "App",
-    components: {
-        IonApp,
-        IonRouterOutlet
-    }
-});
+export default class App extends Vue
+{
+}

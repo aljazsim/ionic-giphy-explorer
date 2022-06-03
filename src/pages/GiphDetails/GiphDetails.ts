@@ -1,4 +1,3 @@
-import "reflect-metadata";
 import { DetailedGiphInfo } from "../../common/detailedGiphInfo";
 import { IClipboardManager } from "../../services/clipboard/IClipboardManager";
 import { IGiphyApiClient } from "../../services/giphy/IGiphyApiClient";

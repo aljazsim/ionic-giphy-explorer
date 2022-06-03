@@ -1,4 +1,3 @@
-import "reflect-metadata";
 import { BasicGiphInfo } from "../../../common/basicGiphInfo";
 import { Icons } from "../../../services/icons";
 import { Vue } from "vue-class-component";

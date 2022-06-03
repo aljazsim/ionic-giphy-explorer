@@ -1,7 +1,7 @@
 {
-  "name": "giphy-explorer",
-  "integrations": {
-    "capacitor": {}
-  },
-  "type": "vue"
+    "name": "Giphy Explorer",
+    "integrations": {
+        "capacitor": {}
+    },
+    "type": "vue"
 }
