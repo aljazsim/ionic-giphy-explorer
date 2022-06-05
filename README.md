@@ -1,1 +1,1 @@
-# mobile-giphy-explorer
+# Mobile Giphy Explorer

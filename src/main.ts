@@ -20,7 +20,7 @@ import { IStateManager } from "./services/state/IStateManager";
 import { StateManager } from "./services/state/stateManager";
 import { store } from "./services/state/store";
 import { defineCustomElements } from "@ionic/pwa-elements/loader";
-import { IonActionSheet, IonBackButton, IonButton, IonButtons, IonCard, IonCardContent, IonCardHeader, IonCardSubtitle, IonCardTitle, IonCol, IonContent, IonFooter, IonGrid, IonHeader, IonIcon, IonicVue, IonInfiniteScroll, IonInfiniteScrollContent, IonInput, IonItem, IonLabel, IonList, IonPage, IonRow, IonSearchbar, IonTitle, IonToolbar, IonVirtualScroll } from "@ionic/vue";
+import { IonActionSheet, IonApp, IonBackButton, IonButton, IonButtons, IonCard, IonCardContent, IonCardHeader, IonCardSubtitle, IonCardTitle, IonCol, IonContent, IonFooter, IonGrid, IonHeader, IonIcon, IonicVue, IonInfiniteScroll, IonInfiniteScrollContent, IonInput, IonItem, IonLabel, IonList, IonPage, IonRouterOutlet, IonRow, IonSearchbar, IonTitle, IonToolbar, IonVirtualScroll } from "@ionic/vue";
 import { cid, container } from "inversify-props";
 import { createApp } from "vue";
 import VueLoadImage from "vue-load-image";
@@ -41,6 +41,7 @@ const app = createApp(App);
 
 // register ionic components
 app.component("ion-action-sheet", IonActionSheet);
+app.component("ion-app", IonApp);
 app.component("ion-back-button", IonBackButton);
 app.component("ion-button", IonButton);
 app.component("ion-buttons", IonButtons);
@@ -63,6 +64,7 @@ app.component("ion-item", IonItem);
 app.component("ion-list", IonList);
 app.component("ion-page", IonPage);
 app.component("ion-row", IonRow);
+app.component("ion-router-outlet", IonRouterOutlet);
 app.component("ion-searchbar", IonSearchbar);
 app.component("ion-title", IonTitle);
 app.component("ion-toolbar", IonToolbar);
