@@ -17,6 +17,7 @@
         "@capacitor/core": "3.5.1",
         "@capacitor/haptics": "1.1.4",
         "@capacitor/keyboard": "1.2.2",
+        "@capacitor/splash-screen": "^1.2.2",
         "@capacitor/status-bar": "1.0.8",
         "@ionic/pwa-elements": "^3.1.1",
         "@ionic/vue": "^6.0.0",

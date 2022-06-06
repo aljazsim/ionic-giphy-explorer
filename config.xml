@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="io.ionic.starter" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <preference name="SplashShowOnlyFirstTime" value="false" />
+    <preference name="SplashScreen" value="screen" />
+    <preference name="SplashScreenDelay" value="30000" />
+    <preference name="AutoHideSplashScreen" value="true" />
+
+    <platform name="android">
+        <splash src="res/screen/android/splash-land-hdpi.png" density="land-hdpi" />
+        <splash src="res/screen/android/splash-land-ldpi.png" density="land-ldpi" />
+        <splash src="res/screen/android/splash-land-mdpi.png" density="land-mdpi" />
+        <splash src="res/screen/android/splash-land-xhdpi.png" density="land-xhdpi" />
+        <splash src="res/screen/android/splash-land-xxhdpi.png" density="land-xxhdpi" />
+        <splash src="res/screen/android/splash-land-xxxhdpi.png" density="land-xxxhdpi" />
+
+        <splash src="res/screen/android/splash-port-hdpi.png" density="port-hdpi" />
+        <splash src="res/screen/android/splash-port-ldpi.png" density="port-ldpi" />
+        <splash src="res/screen/android/splash-port-mdpi.png" density="port-mdpi" />
+        <splash src="res/screen/android/splash-port-xhdpi.png" density="port-xhdpi" />
+        <splash src="res/screen/android/splash-port-xxhdpi.png" density="port-xxhdpi" />
+        <splash src="res/screen/android/splash-port-xxxhdpi.png" density="port-xxxhdpi" />
+    </platform>
+
+    <platform name="ios">
+        <!-- Storyboard (supports all devices): Note: images are determined by scale, idiom, and size traits. The following are suggested based on current device form factors -->
+        <splash src="res/screen/ios/Default@2x~universal~anyany.png" />
+        <splash src="res/screen/ios/Default@2x~universal~comany.png" />
+        <splash src="res/screen/ios/Default@2x~universal~comcom.png" />
+        <splash src="res/screen/ios/Default@3x~universal~anyany.png" />
+        <splash src="res/screen/ios/Default@3x~universal~anycom.png" />
+        <splash src="res/screen/ios/Default@3x~universal~comany.png" />
+    </platform>
+
+    <!-- Configuration using MRT concept (Recommended, see "Windows-specific information" section for details): -->
+    <platform name="windows">
+        <splash src="res/screen/windows/splashscreen.png" target="SplashScreen" />
+        <splash src="res/screen/windows/splashscreenphone.png" target="SplashScreenPhone" />
+    </platform>
+
+    <!-- Configuration using image size: -->
+    <!--<platform name="windows">
+        <splash src="res/screen/windows/splashscreen.png" width="620" height="300"/>
+        <splash src="res/screen/windows/splashscreenphone.png" width="1152" height="1920"/>
+    </platform>-->
+</widget>
