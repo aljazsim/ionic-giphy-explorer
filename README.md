@@ -32,6 +32,13 @@ Mobile Giphy Explorer is a [Vue.js](https://vuejs.org/) and [Ionic](https://ioni
         3. iOS:
             1. prepare environment for building iOS apps see [here](https://ionicframework.com/docs/developing/ios)
 
+## Developing the application
+
+1. run `ionic serve` (runs the application as a web application, rebuilds on code changes)
+2. run `npx tailwindcss -i ./tailwind.config.css -o ./src/assets/tailwind.css -w` (generates CSS class reference; depending on which Tailwind CSS classes are being referenced in HTML files)
+3. update Anroid project with the code changes `ionic cap sync`
+4. deploy to Android device (see above)
+
 ## Libraries used
 
 Some of the libraries being used in Giphy Explorer
@@ -44,4 +51,4 @@ Some of the libraries being used in Giphy Explorer
 -   [Inversify Props](https://github.com/CKGrafico/inversify-props) (dependency injection framework for JavaScript),
 -   [vuex](https://vuex.vuejs.org/) (Vue.js state management library),
 -   [Vue Router](https://router.vuejs.org/) (Vue.js routing library),
--   [TailwindCSS](https://tailwindcss.com/) (utility CSS framework).
+-   [TailwindCSS](https://tailwindcss.com/) (CSS utility framework).
