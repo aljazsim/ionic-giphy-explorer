@@ -3,5 +3,15 @@
     "integrations": {
         "capacitor": {}
     },
+    "plugins": {
+        "SplashScreen": {
+            "launchAutoHide": true,
+            "androidScaleType": "CENTER_CROP",
+            "splashFullScreen": true,
+            "splashImmersive": false,
+            "backgroundColor": "#ff0000",
+            "launchShowDuration": 5000
+        }
+    },
     "type": "vue"
 }

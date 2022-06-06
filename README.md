@@ -2,7 +2,7 @@
 
 Mobile Giphy Explorer is a [Vue.js](https://vuejs.org/) and [Ionic](https://ionicframework.com/) mobile application showcasing basic elements of both frameworks. It allows the users to explore giphs offered by [Giphy Web API](https://developers.giphy.com/) on a mobile device.
 
-![Mobile Giphy Explorer](./giphy-explorer.gif)
+![Mobile Giphy Explorer](./MobileGiphyExplorer.gif)
 
 ## Running the application
 

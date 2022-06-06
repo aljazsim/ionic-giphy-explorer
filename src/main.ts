@@ -1,4 +1,5 @@
 import "./assets/styles";
+import "./assets/plugins";
 import "reflect-metadata";
 import { Configuration, getConfiguration } from "./common/configuration";
 import GiphInfo from "./components/GiphDetails/GiphInfo/GiphInfo.vue";
@@ -14,12 +15,10 @@ import { IGiphyApiClient } from "./services/giphy/IGiphyApiClient";
 import { IRoutingManager } from "./services/router/IRoutingManager";
 import router from "./services/router/routing";
 import { RoutingManager } from "./services/router/RoutingManager";
-import { ISlackManager } from "./services/slack/ISlackManager";
-import { SlackManager } from "./services/slack/SlackManager";
 import { IStateManager } from "./services/state/IStateManager";
 import { StateManager } from "./services/state/stateManager";
 import { store } from "./services/state/store";
-import { SplashScreen } from "@capacitor/splash-screen";
+
 import { defineCustomElements } from "@ionic/pwa-elements/loader";
 import { IonActionSheet, IonApp, IonBackButton, IonButton, IonButtons, IonCard, IonCardContent, IonCardHeader, IonCardSubtitle, IonCardTitle, IonCol, IonContent, IonFooter, IonGrid, IonHeader, IonIcon, IonicVue, IonInfiniteScroll, IonInfiniteScrollContent, IonInput, IonItem, IonLabel, IonList, IonPage, IonRouterOutlet, IonRow, IonSearchbar, IonTitle, IonToolbar, IonVirtualScroll, isPlatform } from "@ionic/vue";
 import { cid, container } from "inversify-props";
@@ -32,7 +31,6 @@ const configuration: Configuration = getConfiguration();
 
 // configure dependency injection
 container.bind<IGiphyApiClient>(cid.IGiphyApiClient).toConstantValue(new GiphyApiClient(configuration.giphy.apiBaseUrl, configuration.giphy.apiKey));
-container.bind<ISlackManager>(cid.ISlackManager).toConstantValue(new SlackManager(configuration.slack.teamId, configuration.slack.channelId));
 container.bind<IStateManager>(cid.IStateManager).toConstantValue(new StateManager(store));
 container.bind<IRoutingManager>(cid.IRoutingManager).toConstantValue(new RoutingManager(router));
 container.addSingleton<IClipboardManager>(ClipboardManager, cid.IClipboardManager);
@@ -89,6 +87,9 @@ app.use(IonicVue);
 app.use(router);
 
 // run application
-router.isReady().then(() => app.mount("#app"));
+router.isReady().then(async () =>
+{
+    app.mount("#app");
+});
 
 defineCustomElements(window);
