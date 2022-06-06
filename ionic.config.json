@@ -1,5 +1,5 @@
 {
-    "name": "Giphy Explorer",
+    "name": "Mobile Giphy Explorer",
     "integrations": {
         "capacitor": {}
     },

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" width="32" height="32" viewBox="0 0 64 64" style="enable-background:new 0 0 64 64;" xml:space="preserve" preserveAspectRatio="none" viewbox="0 0 32 32">
+
+<g>
+	<defs>
+		<path id="574090498_SVGID_1__focus" d="M28.852,9h5.63c0,0-5.706-3.294-7.077-4.086C23.885,2.881,21.299,2,17,2C11.227,2,6.564,6.519,6.564,10.658    C4.94,12.688,4,15.234,4,18c0,3.549,1.55,6.729,4,8.926V22.25C9.414,25.343,12.813,27,16,27c0,0,0,8.124,0,9.994    C16,46.385,23.615,54,33.006,54c3.985,0,7.032,0,10.551,0c1.583,2.74,2.07,3.587,3.135,5.43c1.521,2.635,4.739,4.57,7.985,4.57    h5.929L28.852,9z"></path>
+	</defs>
+	<use xlink:href="#574090498_SVGID_1__focus" class="stshockcolor" style="fill:#D1D5DD;;overflow:visible;" data-st="fill:#D1D5DD;;overflow:visible;"></use>
+	<clipPath id="574090498_SVGID_2__focus">
+		<use xlink:href="#574090498_SVGID_1__focus" style="overflow:visible;"></use>
+	</clipPath>
+	<g class="st2" style="clip-path:url(#574090498_SVGID_2__focus);;">
+		<path class="st0" d="M31.101,46.808c-3.087-1.787-5.163-5.125-5.163-8.948c0-3.821,2.074-7.158,5.156-8.944    c1.519-0.88,7.666-4.429,7.666-4.429l0.852-8.799c0,0-11.619,6.708-16.104,9.304C21.299,26.269,18.735,27,16,27    c-1.493,0-9.436,0-9.436,0L6,2h55.855v62h-1.25C60.605,64,32.619,47.686,31.101,46.808z" style="opacity:0.3;fill:#FFFFFF;;"></path>
+		<polygon class="st1" points="4,6 5.298,8.464 16,27 4,27   " style="fill:#47475E;;"></polygon>
+		<polygon class="st0" points="8,22.25 11.943,19.974 4.231,6.616 4,6 4,28 8,28   " style="opacity:0.3;fill:#FFFFFF;;"></polygon>
+		<ellipse class="st4" cx="17" cy="14.5" rx="2" ry="2.5" style="fill:#231F20;fill-opacity:0.6;;"></ellipse>
+	</g>
+</g>
+<path class="st3" d="M22.457,9c0,0,4.689,2.701,8.872,5.124C33.389,15.316,35.781,16,38.337,16c5.183,0,9.707-2.816,12.127-7H22.457  z" style="fill:#F7C90B;;"></path>
+</svg>
